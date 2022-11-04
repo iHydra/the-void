@@ -1,0 +1,523 @@
+/* VARIABLES */
+
+:root {
+  --theme: rgb(83, 45, 164);
+  --primaryText: rgb(135, 99, 212);
+  --primaryShadow: rgb(63, 34, 124);
+  --secondaryTheme: rgb(96, 114, 29);
+  --secondaryThemeNum: 96, 114, 29;
+  --secondaryShadow: rgb(68, 82, 20);
+  --secondaryShadowNum: 68, 82, 20;
+  --secondaryText: hsl(73, 59%, 38%);
+}
+
+/* CORE */
+
+body {
+  background: #1f1f1f !important;
+}
+
+button[onclick="colorBlack()"],
+button[onclick="colorDefault()"],
+button[onclick="colorGrey()"] {
+  display: none !important;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--theme) #000111;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--theme);
+  border-radius: 10px;
+  border: 4px solid #181818;
+}
+
+/* -- FORUM TABLES */
+
+table.tborder {
+  /* BODY */
+  /* SHADOW-2-STRONG */
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16), 0 2px 2px 0 rgba(0, 0, 0, 0.1) !important;
+  background: #1b1b1b !important;
+  border: 0 !important;
+}
+
+table.tborder td.thead {
+  /* THEAD COLORED */
+  background: var(--theme) !important;
+  padding: 10px;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb a,
+.arrow {
+  background: #282828 !important;
+}
+
+.breadcrumb {
+  /* SHADOW-1-STRONG */
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.16), 0 1px 1px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+div.breadcrumb > span.arrow {
+  box-shadow: 3px -3px 0 2px rgb(13 13 13 / 50%),
+    5px -5px 0 2px rgb(45 45 45 / 40%);
+}
+
+/* -- PAGINATION */
+
+.pagination {
+  margin: 10px 0.25rem 0 0.25rem !important;
+}
+
+.pagination > * {
+  font-size: 0.9rem !important;
+  border-radius: 0.25rem !important;
+  margin: 0 !important;
+  transition: all 0.3s linear;
+  padding: 0.375rem 0.75rem !important;
+}
+
+.pagination .pagination_current {
+  background: var(--theme) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 4px 9px -4px var(--theme);
+  transition: all 0.2s linear;
+  font-weight: 500 !important;
+}
+
+.pagination a {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.pagination a:hover {
+  background: #282828 !important;
+}
+
+div.pagination > div.popup_menu {
+  margin-top: -40px !important;
+  margin-left: 42px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* HEADER */
+
+/* -- PANEL */
+
+#panel {
+  /* SHADOW-3-STRONG */
+  /* box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.16), */
+  /* 0 6px 18px -1px rgba(0, 0, 0, 0.1) !important; */
+}
+
+#panel > .upper {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 6px 0 !important;
+}
+
+#panel > .lower {
+  border: 0 !important;
+  background: #282828 !important;
+  padding: 10px 0 !important;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+    0 6px 18px -1px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+}
+
+.oc-time {
+  margin-top: -5px !important;
+  color: var(--primaryText) !important;
+}
+
+/* -- PANEL MENU */
+
+#panel .lower > div.wrapper {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+#panel .lower ul.menu.panel_links,
+#panel .lower ul.menu.user_links {
+  display: inline-flex !important;
+  float: unset !important;
+  font-size: unset !important;
+}
+
+#panel .lower ul.menu.panel_links {
+  margin-left: 0 !important;
+}
+
+#panel .lower ul.user_links {
+  margin-right: 0 !important;
+}
+
+@media only screen and (max-width: 1275px) and (min-device-width: 768px) {
+  #header ul.menu {
+    padding: 0 !important;
+  }
+}
+
+#panel .lower ul.panel_links > li,
+#panel .lower ul.user_links > li {
+  margin: 0 2px !important;
+}
+
+#panel .lower ul.user_links > li > a,
+#panel .lower ul.panel_links > li > a {
+  padding: 0 8px !important;
+}
+
+/* #panel .lower ul.user_links li a:hover,
+#panel .lower ul.user_links li:hover,
+#panel .lower ul.panel_links a:hover,
+#panel .lower ul.panel_links li:hover {
+  background: #222 !important;
+} */
+
+ul.panel_links ul.dropdown-menu {
+  /* Dropdown Menu Base */
+  border: 0;
+  width: auto;
+  white-space: nowrap;
+  margin-top: 10px;
+  background-color: transparent !important;
+  /* SHADOW-3-STRONG */
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+    0 6px 18px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+ul.panel_links ul.dropdown-menu > li {
+  /* Dropdown Menu Items */
+  width: 100%;
+  border-bottom: 1px solid #202020;
+  background: #181818;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ul.panel_links ul.dropdown-menu > li:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+ul.panel_links ul.dropdown-menu > li:last-child {
+  border-bottom: 0px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+ul.panel_links ul.dropdown-menu > li:hover {
+  background: #222;
+}
+
+#panel .lower ul.panel_links a.usercp {
+  /* Dropdown Menu Links */
+  font-size: 1em;
+  width: 100%;
+  padding: 8px 14px 8px 6px;
+  box-sizing: border-box;
+}
+
+ul.panel_links ul.dropdown-menu > li > a > span {
+  /* Dropdown Menu Link Labels */
+  font-size: 1em !important;
+}
+
+/* -- TABS */
+
+ul.shadetabs {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.shadetabs li a {
+  font-size: 1em !important;
+  font-weight: 300 !important;
+  color: #666 !important;
+  border-radius: 0;
+  border: 0 !important;
+  text-transform: uppercase;
+  padding: 12px 20px 11px;
+  margin-right: unset !important;
+  margin-bottom: -1px;
+  background: none !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+ul.shadetabs li a:hover {
+  color: #888 !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+ul.shadetabs li a.selected {
+  color: var(--primaryText) !important;
+  border-color: var(--primaryText) !important;
+  border-bottom: 1px solid !important;
+}
+
+ul.shadetabs li {
+  margin: 0;
+}
+
+/* SHOWTHREAD.PHP */
+
+/* -- AUTHOR STATS */
+
+div.author_statistics > div.author_wrapper {
+  border: 0 !important;
+  box-shadow: 0 2px 15px -3px rgb(0 0 0 / 7%), 0 10px 20px -2px rgb(0 0 0 / 4%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-radius: 0.5rem;
+}
+
+/* -- BLOCKQUOTE */
+
+blockquote.mycode_quote {
+  border: 0 !important;
+  box-shadow: 0 2px 15px -3px rgb(0 0 0 / 7%), 0 10px 20px -2px rgb(0 0 0 / 4%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+}
+
+blockquote.mycode_quote > cite {
+  padding: 0.5rem 10px;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid hsl(0, 0%, 23%);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+blockquote.mycode_quote > cite:after {
+  display: none !important;
+}
+
+/* BUTTONS */
+
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* -- NEW REPLY NEW THREAD BUTTONS */
+
+div[class="float_right"] > a.new_thread_button,
+div.float_right > a.new_reply_button,
+div[align="center"] > input.button,
+div[style="text-align:center"] > input.button,
+tbody#quickreply_e input.button,
+div.float_right > a.button[onclick="selfclose()"] {
+  color: white;
+  background: var(--secondaryTheme) !important;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  border: 0 !important;
+  -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%),
+    0 2px 10px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  font-weight: 700;
+  padding: 0.625rem 1.5rem 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0.25rem !important;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+div[class="float_right"] > a.new_thread_button:hover,
+div.float_right > a.new_reply_button:hover,
+div[align="center"] > input.button:hover,
+div[style="text-align:center"] > input.button:hover,
+tbody#quickreply_e input.button:hover {
+  background: var(--secondaryShadow) !important;
+  -webkit-box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%),
+    0 4px 20px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.new_thread_button > i.fa-lg {
+  font-size: 0.8rem !important;
+}
+
+div[align="center"] > input.button:not(:first-child),
+div[style="text-align:center"] > input.button:not(:first-child),
+tbody#quickreply_e input.button:not(:first-child),
+div.float_right > a.button[onclick="selfclose()"] {
+  background: rgba(var(--secondaryShadowNum), 0.2) !important;
+  color: var(--secondaryText);
+  box-shadow: none;
+}
+
+div[align="center"] > input.button:not(:first-child):hover,
+div[style="text-align:center"] > input.button:not(:first-child):hover,
+tbody#quickreply_e input.button:not(:first-child):hover,
+div.float_right > a.button[onclick="selfclose()"]:hover {
+  background: rgba(var(--secondaryShadowNum), 0.1) !important;
+}
+
+/* -- POSTBIT BUTTONS  */
+
+div.postbit_buttons > a[class^="postbit"] {
+  background: hsl(0, 0%, 18%);
+  vertical-align: bottom;
+  border: 0;
+  box-shadow: 0 4px 9px -4px rgb(0 0 0 / 35%);
+  padding: 0.375rem 1rem 0.3125rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+div.postbit_buttons > a[class^="postbit"]:hover {
+  background: var(--secondaryShadow) !important;
+  box-shadow: 0 8px 9px -4px rgb(var(--secondaryShadowNum) / 30%),
+    0 4px 18px 0 rgb(var(--secondaryShadowNum) / 20%);
+}
+
+/* INPUT / FORM FIELDS */
+
+form[action="search.php"] > .v-input-outline {
+  position: relative;
+}
+
+.v-input-outline .v-input-search {
+  margin: 0;
+
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4f4f4f;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+
+  background: transparent;
+  color: hsla(0, 0%, 100%, 0.7);
+  min-height: auto;
+  padding: 0.33em 0.75em;
+  border: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.v-input-outline .v-input-search ~ .v-input-label {
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
+  padding-top: 0.37rem;
+  pointer-events: none;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 0;
+
+  color: hsla(0, 0%, 100%, 0.7);
+
+  margin-left: 0px;
+}
+
+.v-input-outline .v-input-search ~ .v-input-notch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+}
+
+.v-input-outline .v-input-search ~ .v-input-notch div {
+  background: transparent;
+  pointer-events: none;
+  border: 1px solid #bdbdbd;
+  border-color: hsla(0, 0%, 100%, 0.7);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.v-input-outline .v-input-search ~ .v-input-notch .v-input-notch-leading {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0.5rem;
+  border-right: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+/* form[action="search.php"] > input.v-input-search:focus {
+  border-color: var(--secondaryTheme);
+}
+
+form[action="search.php"] > input.v-input-search:focus ~ .v-input-label {
+  -webkit-transform: translateY(-1rem) translateY(0.1rem) scale(0.8);
+  transform: translateY(-1rem) translateY(0.1rem) scale(0.8);
+  color: var(--theme);
+} */
+
+/* SHOWGROUPS.PHP */
+
+td.trow1 > div.groupContainer > div {
+  border: 0;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.16), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+}
